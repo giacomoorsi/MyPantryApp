@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPantry - MyPantry</title>
+    <link rel="stylesheet" type="text/css" href="all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <strong>
+                MyPantry
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+                <section id="classes">
+        <h2>Classes</h2>
+        <dl>
+            <dt class="class">
+    <a href="AppDelegate/index.html" title="class - AppDelegate">
+        App​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="MyPantryModel/index.html" title="class - MyPantryModel">
+        MyPantry​Model
+    </a>
+</dt>
+<dd>
+    <p>Handles all the main activies of MyPantry and the connection with the CoreData database</p>
+
+</dd>
+<dt class="class">
+    <a href="ServerModel/index.html" title="class - ServerModel">
+        Server​Model
+    </a>
+</dt>
+<dd>
+    <p>Handles the connection between MyPantry and the collaborative database</p>
+
+</dd>
+<dt class="class">
+    <a href="WatchConnectionModel/index.html" title="class - WatchConnectionModel">
+        Watch​Connection​Model
+    </a>
+</dt>
+<dd>
+    <p>Handles the connection with the Apple Watch app. Everytime there is an update in the number of products in the database, <code>MyPantryModel</code> notifies the Apple Watch using the <code>WatchConnectivityModel</code>.</p>
+
+</dd>
+<dt class="class">
+    <a href="Category/index.html" title="class - Category">
+        Category
+    </a>
+</dt>
+<dd>
+    <p>Class for a Category of products</p>
+
+</dd>
+<dt class="class">
+    <a href="Pantry/index.html" title="class - Pantry">
+        Pantry
+    </a>
+</dt>
+<dd>
+    <p>Class for an area of the house where the user arranges its products</p>
+
+</dd>
+<dt class="class">
+    <a href="PantryItem/index.html" title="class - PantryItem">
+        Pantry​Item
+    </a>
+</dt>
+<dd>
+    <p>Class which handles a product</p>
+
+</dd>
+<dt class="class">
+    <a href="ShoppingListItem/index.html" title="class - ShoppingListItem">
+        Shopping​List​Item
+    </a>
+</dt>
+<dd>
+    <p>Item on the shopping list</p>
+
+</dd>
+<dt class="class">
+    <a href="SceneDelegate/index.html" title="class - SceneDelegate">
+        Scene​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="BarcodeScannerView/index.html" title="class - BarcodeScannerView">
+        Barcode​Scanner​View
+    </a>
+</dt>
+<dd>
+    <p>Handles a view where it is showed a barcode scanning</p>
+
+</dd>
+<dt class="class">
+    <a href="CategoriesTableViewController/index.html" title="class - CategoriesTableViewController">
+        Categories​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a list of the categories and allows the user to add or remove categories</p>
+
+</dd>
+<dt class="class">
+    <a href="ChooseCategoryOrPantryTableViewController/index.html" title="class - ChooseCategoryOrPantryTableViewController">
+        Choose​Category​OrPantry​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows the categories or the pantries. The chosen one is returned to the <code>delegate</code></p>
+
+</dd>
+<dt class="class">
+    <a href="EditProductTableViewController/index.html" title="class - EditProductTableViewController">
+        Edit​Product​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a page where the user edit a <code>PantryItem</code></p>
+
+</dd>
+<dt class="class">
+    <a href="HomeTableViewController/index.html" title="class - HomeTableViewController">
+        Home​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows the home of MyPantry</p>
+
+</dd>
+<dt class="class">
+    <a href="InsertBarcodeViewController/index.html" title="class - InsertBarcodeViewController">
+        Insert​Barcode​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a view which allows the user to insert a barcode manually</p>
+
+</dd>
+<dt class="class">
+    <a href="InsertProductDescriptionTableViewController/index.html" title="class - InsertProductDescriptionTableViewController">
+        Insert​Product​Description​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a view which can be used to insert or edit a <code>PantryItem</code> description</p>
+
+</dd>
+<dt class="class">
+    <a href="InsertProductTableViewController/index.html" title="class - InsertProductTableViewController">
+        Insert​Product​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a view which lets the user to insert a new product in MyPantry</p>
+
+</dd>
+<dt class="class">
+    <a href="PantriesTableViewController/index.html" title="class - PantriesTableViewController">
+        Pantries​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a list of the pantries and allows the user to add or remove pantries</p>
+
+</dd>
+<dt class="class">
+    <a href="ProductCell/index.html" title="class - ProductCell">
+        Product​Cell
+    </a>
+</dt>
+<dd>
+    <p>A cell which contains information about the product</p>
+
+</dd>
+<dt class="class">
+    <a href="ProductsTableViewController/index.html" title="class - ProductsTableViewController">
+        Products​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a list of products</p>
+
+</dd>
+<dt class="class">
+    <a href="ScannerViewController/index.html" title="class - ScannerViewController">
+        Scanner​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Handles a the view with barcode scanning</p>
+
+</dd>
+<dt class="class">
+    <a href="ProductTableCell/index.html" title="class - ProductTableCell">
+        Product​Table​Cell
+    </a>
+</dt>
+<dd>
+    <p>A cell which shows a product on the collaborative database</p>
+
+</dd>
+<dt class="class">
+    <a href="SearchProductsByBarcodeTableViewController/index.html" title="class - SearchProductsByBarcodeTableViewController">
+        Search​Products​ByBarcode​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a list of product which has been found on the collaborative database for a certain barcode</p>
+
+</dd>
+<dt class="class">
+    <a href="SettingsTableViewController/index.html" title="class - SettingsTableViewController">
+        Settings​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a view which allows the user to change MyPantry prefererences</p>
+
+</dd>
+<dt class="class">
+    <a href="ShoppingListTableCell/index.html" title="class - ShoppingListTableCell">
+        Shopping​List​Table​Cell
+    </a>
+</dt>
+<dd>
+    <p>Shows an item in the shopping list</p>
+
+</dd>
+<dt class="class">
+    <a href="ShoppingListTableViewController/index.html" title="class - ShoppingListTableViewController">
+        Shopping​List​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a list of items in the shopping list</p>
+
+</dd>
+<dt class="class">
+    <a href="UserRegistrationTableViewController/index.html" title="class - UserRegistrationTableViewController">
+        User​Registration​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a view which lets the user to sign-up on the collaborative database</p>
+
+</dd>
+<dt class="class">
+    <a href="UserTableViewController/index.html" title="class - UserTableViewController">
+        User​Table​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows the credentials of the user</p>
+
+</dd>
+<dt class="class">
+    <a href="WelcomeScreenCell/index.html" title="class - WelcomeScreenCell">
+        Welcome​Screen​Cell
+    </a>
+</dt>
+<dd>
+    <p>Cell which contains a feature of MyPantry</p>
+
+</dd>
+<dt class="class">
+    <a href="WelcomeScreenCollectionViewController/index.html" title="class - WelcomeScreenCollectionViewController">
+        Welcome​Screen​Collection​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>Shows a recap of the features of MyPantry for new users</p>
+
+</dd>
+<dt class="class">
+    <a href="MyPantryTests/index.html" title="class - MyPantryTests">
+        MyPantry​Tests
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="MyPantryUITests/index.html" title="class - MyPantryUITests">
+        MyPantry​UITests
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="ComplicationController/index.html" title="class - ComplicationController">
+        Complication​Controller
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="MyPantryWatchModel/index.html" title="class - MyPantryWatchModel">
+        MyPantry​Watch​Model
+    </a>
+</dt>
+<dd>
+    <p>The model for the Apple Watch app. It receives the messages from the iOS app and updates the ContentView</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="ServerModel_urls" title="structure - ServerModel.urls">
+        Server​Model.​urls
+    </a>
+</dt>
+<dd>
+    <p>The API documentation can be found here: https://lam21.modron.network/explorer/#/</p>
+
+</dd>
+<dt class="structure">
+    <a href="ServerModel_Product" title="structure - ServerModel.Product">
+        Server​Model.​Product
+    </a>
+</dt>
+<dd>
+    <p>A product on the collaborative database</p>
+
+</dd>
+<dt class="structure">
+    <a href="BarcodeData/index.html" title="structure - BarcodeData">
+        Barcode​Data
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="WelcomeScreenCollectionViewController_WelcomeScreenItem" title="structure - WelcomeScreenCollectionViewController.WelcomeScreenItem">
+        Welcome​Screen​Collection​View​Controller.​Welcome​Screen​Item
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="ContentView/index.html" title="structure - ContentView">
+        Content​View
+    </a>
+</dt>
+<dd>
+    <p>The view of the Apple Watch app of MyPantry</p>
+
+</dd>
+<dt class="structure">
+    <a href="ContentView_Previews" title="structure - ContentView_Previews">
+        Content​View_Previews
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="MyPantryApp/index.html" title="structure - MyPantryApp">
+        MyPantry​App
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="MyPantryWatchEntry/index.html" title="structure - MyPantryWatchEntry">
+        MyPantry​Watch​Entry
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="Provider/index.html" title="structure - Provider">
+        Provider
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="MyPantryWidgetEntry/index.html" title="structure - MyPantryWidgetEntry">
+        MyPantry​Widget​Entry
+    </a>
+</dt>
+<dd>
+    <p>An entry on the Widget</p>
+
+</dd>
+<dt class="structure">
+    <a href="MyPantryWidgetEntryView/index.html" title="structure - MyPantryWidgetEntryView">
+        MyPantry​Widget​Entry​View
+    </a>
+</dt>
+<dd>
+    <p>The view of the Widget</p>
+
+</dd>
+<dt class="structure">
+    <a href="MyPantryWidget/index.html" title="structure - MyPantryWidget">
+        MyPantry​Widget
+    </a>
+</dt>
+<dd>
+    <p>The Widget for MyPantry</p>
+
+</dd>
+<dt class="structure">
+    <a href="MyPantryWidget_Previews" title="structure - MyPantryWidget_Previews">
+        MyPantry​Widget_Previews
+    </a>
+</dt>
+<dd>
+    <p>The preview for the Widget</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="ServerModel_ServerModelError" title="enumeration - ServerModel.ServerModelError">
+        Server​Model.​Server​Model​Error
+    </a>
+</dt>
+<dd>
+    <p>A set of error which may be raised during the connection with the remote server</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="ChooseCategoryOrPantryTableViewController_Choice" title="enumeration - ChooseCategoryOrPantryTableViewController.Choice">
+        Choose​Category​OrPantry​Table​View​Controller.​Choice
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="BarcodeScannerViewDelegate/index.html" title="protocol - BarcodeScannerViewDelegate">
+        Barcode​Scanner​View​Delegate
+    </a>
+</dt>
+<dd>
+    <p>Delegate callback for the BarcodeScannerView.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="ProductPageProtocol/index.html" title="protocol - ProductPageProtocol">
+        Product​Page​Protocol
+    </a>
+</dt>
+<dd>
+    <p>The views which allow the user to edit or add a new product must implement this protocol</p>
+
+</dd>
+        </dl>
+    </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-11T17:39:28+0200">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPantry - MyPantryModel</title>
+    <link rel="stylesheet" type="text/css" href="../all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <strong>
+                MyPantry
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#mypantrymodel.model">model</a></li><li class="variable"><a href="#mypantrymodel.context">context</a></li><li class="variable"><a href="#mypantrymodel.watchconnectionmodel">watch​Connection​Model</a></li><li class="variable"><a href="#mypantrymodel.notificationcenter">notification​Center</a></li><li class="variable"><a href="#mypantrymodel.defaults">defaults</a></li><li class="variable"><a href="#mypantrymodel.expiringthreshold">expiring​Threshold</a></li><li class="variable"><a href="#mypantrymodel.notificationsenabled">notifications​Enabled</a></li><li class="variable"><a href="#mypantrymodel.welcomecompleted">welcome​Completed</a></li><li class="variable"><a href="#mypantrymodel.categories">categories</a></li><li class="variable"><a href="#mypantrymodel.pantries">pantries</a></li><li class="variable"><a href="#mypantrymodel.shoppinglistitems">shopping​List​Items</a></li><li class="variable"><a href="#mypantrymodel.products">products</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#mypantrymodel.add(categorywithname:)">add(category​With​Name:​)</a></li><li class="function"><a href="#mypantrymodel.add(shoppinglistitemfrompantryitem:)">add(shopping​List​Item​From​Pantry​Item:​)</a></li><li class="function"><a href="#mypantrymodel.add(pantrywithname:)">add(pantry​With​Name:​)</a></li><li class="function"><a href="#mypantrymodel.addpantryitem(name:productdescription:expiredate:category:pantry:barcode:)">add​Pantry​Item(name:​product​Description:​expire​Date:​category:​pantry:​barcode:​)</a></li><li class="function"><a href="#mypantrymodel.consume(product:)">consume(product:​)</a></li><li class="function"><a href="#mypantrymodel.open(product:)">open(product:​)</a></li><li class="function"><a href="#mypantrymodel.remove(category:)">remove(category:​)</a></li><li class="function"><a href="#mypantrymodel.remove(pantry:)">remove(pantry:​)</a></li><li class="function"><a href="#mypantrymodel.remove(product:)">remove(product:​)</a></li><li class="function"><a href="#mypantrymodel.remove(shoppinglistitem:)">remove(shopping​List​Item:​)</a></li><li class="function"><a href="#mypantrymodel.setnotificationsfor(product:)">set​Notifications​For(product:​)</a></li><li class="function"><a href="#mypantrymodel.removenotificationsfor(product:)">remove​Notifications​For(product:​)</a></li><li class="function"><a href="#mypantrymodel.getexpiredproducts()">get​Expired​Products()</a></li><li class="function"><a href="#mypantrymodel.getexpiringproducts()">get​Expiring​Products()</a></li><li class="function"><a href="#mypantrymodel.getopenedproducts()">get​Opened​Products()</a></li><li class="function"><a href="#mypantrymodel.getconsumedproducts()">get​Consumed​Products()</a></li><li class="function"><a href="#mypantrymodel.getproductsby(category:)">get​Products​By(category:​)</a></li><li class="function"><a href="#mypantrymodel.getproductsby(pantry:)">get​Products​By(pantry:​)</a></li><li class="function"><a href="#mypantrymodel.commit()">commit()</a></li><li class="function"><a href="#mypantrymodel.updatewidget()">update​Widget()</a></li><li class="function"><a href="#mypantrymodel.rollback()">rollback()</a></li><li class="function"><a href="#mypantrymodel.initapplication()">init​Application()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">MyPantry​Model</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">MyPantryModel</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Handles all the main activies of MyPantry and the connection with the CoreData database</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="mypantrymodel.model">
+    <h3>
+        <code><a href="#mypantrymodel.model">model</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">model</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.context">
+    <h3>
+        <code><a href="#mypantrymodel.context">context</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">context</span> = <span class="variable">AppDelegate</span>.<span class="variable">viewContext</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.watchconnectionmodel">
+    <h3>
+        <code><a href="#mypantrymodel.watchconnectionmodel">watch​Connection​Model</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">watchConnectionModel</span> = <span class="variable">WatchConnectionModel</span>.<span class="variable">model</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.notificationcenter">
+    <h3>
+        <code><a href="#mypantrymodel.notificationcenter">notification​Center</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">notificationCenter</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.defaults">
+    <h3>
+        <code><a href="#mypantrymodel.defaults">defaults</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">defaults</span>: <span class="type">UserDefaults</span> = <span class="variable">UserDefaults</span>(<span class="variable">suiteName</span>: <span class="string literal">"</span><span class="string literal">group.giacomoorsi.MyPantry</span><span class="string literal">"</span>)! </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.expiringthreshold">
+    <h3>
+        <code><a href="#mypantrymodel.expiringthreshold">expiring​Threshold</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">expiringThreshold</span> : <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A <code>PantryItem</code> is considered &quot;expiring&quot; when its expiry date is later then the <code>expiringThreshold</code></p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.notificationsenabled">
+    <h3>
+        <code><a href="#mypantrymodel.notificationsenabled">notifications​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">notificationsEnabled</span> : <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>true</code> if the user has enabled notifications for MyPantry</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.welcomecompleted">
+    <h3>
+        <code><a href="#mypantrymodel.welcomecompleted">welcome​Completed</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">welcomeCompleted</span> : <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>true</code> if the user has completed the welcome procedure</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.categories">
+    <h3>
+        <code><a href="#mypantrymodel.categories">categories</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">categories</span> : [<a href="Category/index.html"><span class="type">Category</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Contains the list of categories in the database</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.pantries">
+    <h3>
+        <code><a href="#mypantrymodel.pantries">pantries</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">pantries</span> : [<a href="Pantry/index.html"><span class="type">Pantry</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Contains the list of pantries in the database</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.shoppinglistitems">
+    <h3>
+        <code><a href="#mypantrymodel.shoppinglistitems">shopping​List​Items</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">shoppingListItems</span> : [<a href="ShoppingListItem/index.html"><span class="type">ShoppingListItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Contains the list of shopping-list items in the database</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="mypantrymodel.products">
+    <h3>
+        <code><a href="#mypantrymodel.products">products</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">products</span> : [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Contains an unfiltered list of products</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="mypantrymodel.add(categorywithname:)">
+    <h3>
+        <code><a href="#mypantrymodel.add(categorywithname:)">add(category​With​Name:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">add</span>(<span class="variable">categoryWithName</span> <span class="variable">newCategoryName</span>: <span class="type">String</span>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adds a new <code>Category</code> to the CoreData database
+- Parameter newCategoryName: the name of the new <code>Category</code></p>
+
+</div>
+</div>
+<div role="article" class="function" id="mypantrymodel.add(shoppinglistitemfrompantryitem:)">
+    <h3>
+        <code><a href="#mypantrymodel.add(shoppinglistitemfrompantryitem:)">add(shopping​List​Item​From​Pantry​Item:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">add</span>(<span class="variable">shoppingListItemFromPantryItem</span> <span class="variable">pantryItem</span> : <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adds a new <code>ShoppingListItem</code> from a <code>PantryItem</code>
+- Parameter pantryItem: the <code>PantryItem</code> from which it is created a new  <code>ShoppingListItem</code></p>
+
+</div>
+</div>
+<div role="article" class="function" id="mypantrymodel.add(pantrywithname:)">
+    <h3>
+        <code><a href="#mypantrymodel.add(pantrywithname:)">add(pantry​With​Name:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">add</span>(<span class="variable">pantryWithName</span> <span class="variable">newPantryName</span>: <span class="type">String</span>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adds a new <code>Pantry</code> to the CodeData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>new​Pantry​Name</th>
+    <td><code class="type">String</code></td>
+    <td><p>the name of the new <code>Pantry</code></p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.addpantryitem(name:productdescription:expiredate:category:pantry:barcode:)">
+    <h3>
+        <code><a href="#mypantrymodel.addpantryitem(name:productdescription:expiredate:category:pantry:barcode:)">add​Pantry​Item(name:​product​Description:​expire​Date:​category:​pantry:​barcode:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">addPantryItem</span> (<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">productDescription</span> : <span class="type">String</span>?, <span class="variable">expireDate</span> : <span class="type">Date</span>?, <span class="variable">category</span> : <a href="Category/index.html"><span class="type">Category</span></a>, <span class="variable">pantry</span> : <a href="Pantry/index.html"><span class="type">Pantry</span></a>, <span class="variable">barcode</span> : <span class="type">String</span>) -&gt; <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adds a new <code>PantryItem</code> to the CoreData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>name</th>
+    <td><code class="type">String</code></td>
+    <td><p>the name of the product</p>
+</td>
+</tr>
+<tr>
+    <th>product​Description</th>
+    <td><code class="type">String?</code></td>
+    <td><p>the description of the product (optional)</p>
+</td>
+</tr>
+<tr>
+    <th>expire​Date</th>
+    <td><code class="type">Date?</code></td>
+    <td><p>the expiry date of the product (optional)</p>
+</td>
+</tr>
+<tr>
+    <th>category</th>
+    <td><code class="type">Category</code></td>
+    <td><p>the category of the product</p>
+</td>
+</tr>
+<tr>
+    <th>pantry</th>
+    <td><code class="type">Pantry</code></td>
+    <td><p>the pantry where the product is situated</p>
+</td>
+</tr>
+<tr>
+    <th>barcode</th>
+    <td><code class="type">String</code></td>
+    <td><p>the barcode of the product</p>
+</td>
+</tr>
+<tr>
+    <th>Returns</th>
+    <td></td>
+    <td><p>the new product</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.consume(product:)">
+    <h3>
+        <code><a href="#mypantrymodel.consume(product:)">consume(product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">consume</span>(<span class="variable">product</span>: <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Inverts the <code>consumed</code> attribute of a <code>PantryItem</code> and enables/disables the notifications for its expiry date</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>product</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the product which has been consumed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.open(product:)">
+    <h3>
+        <code><a href="#mypantrymodel.open(product:)">open(product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">open</span>(<span class="variable">product</span>: <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Inverts the <code>opened</code> attribute of a <code>PantryItem</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>product</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the product which has been opened/closed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.remove(category:)">
+    <h3>
+        <code><a href="#mypantrymodel.remove(category:)">remove(category:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">remove</span>(<span class="variable">category</span> <span class="variable">oldCateogory</span>: <a href="Category/index.html"><span class="type">Category</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes a <code>Category</code> from the CoreData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>old​Cateogory</th>
+    <td><code class="type">Category</code></td>
+    <td><p>the category to be removed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.remove(pantry:)">
+    <h3>
+        <code><a href="#mypantrymodel.remove(pantry:)">remove(pantry:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">remove</span>(<span class="variable">pantry</span> <span class="variable">oldPantry</span>: <a href="Pantry/index.html"><span class="type">Pantry</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes a <code>Pantry</code> from the CoreData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>old​Pantry</th>
+    <td><code class="type">Pantry</code></td>
+    <td><p>the pantry to be removed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.remove(product:)">
+    <h3>
+        <code><a href="#mypantrymodel.remove(product:)">remove(product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">remove</span>(<span class="variable">product</span> <span class="variable">oldProduct</span>: <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes a <code>PantryItem</code> from the CoreData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>old​Product</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the product to be removed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.remove(shoppinglistitem:)">
+    <h3>
+        <code><a href="#mypantrymodel.remove(shoppinglistitem:)">remove(shopping​List​Item:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">remove</span>(<span class="variable">shoppingListItem</span> <span class="variable">oldShoppingListItem</span>: <a href="ShoppingListItem/index.html"><span class="type">ShoppingListItem</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes a <code>ShoppingListItem</code> from the CoreData database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>old​Product</th>
+    <td></td>
+    <td><p>the item to be removed</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.setnotificationsfor(product:)">
+    <h3>
+        <code><a href="#mypantrymodel.setnotificationsfor(product:)">set​Notifications​For(product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">setNotificationsFor</span>(<span class="variable">product</span> <span class="variable">pantryItem</span>: <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Enables the reminders for a product</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>pantry​Item</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the product</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.removenotificationsfor(product:)">
+    <h3>
+        <code><a href="#mypantrymodel.removenotificationsfor(product:)">remove​Notifications​For(product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">removeNotificationsFor</span>(<span class="variable">product</span> <span class="variable">pantryItem</span>: <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes all the notifications for a product</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>pantry​Item</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the product</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="mypantrymodel.getexpiredproducts()">
+    <h3>
+        <code><a href="#mypantrymodel.getexpiredproducts()">get​Expired​Products()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getExpiredProducts</span>() -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the products which are expired and have not been consumed</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.getexpiringproducts()">
+    <h3>
+        <code><a href="#mypantrymodel.getexpiringproducts()">get​Expiring​Products()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getExpiringProducts</span>() -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the products which are going to expire soon and have not been consumed</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.getopenedproducts()">
+    <h3>
+        <code><a href="#mypantrymodel.getopenedproducts()">get​Opened​Products()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getOpenedProducts</span>() -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the products which are opened and not consumed</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.getconsumedproducts()">
+    <h3>
+        <code><a href="#mypantrymodel.getconsumedproducts()">get​Consumed​Products()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getConsumedProducts</span>() -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the consumed products</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.getproductsby(category:)">
+    <h3>
+        <code><a href="#mypantrymodel.getproductsby(category:)">get​Products​By(category:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getProductsBy</span>(<span class="variable">category</span>: <a href="Category/index.html"><span class="type">Category</span></a>) -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the products which belongs to a certain <code>Category</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>category</th>
+    <td><code class="type">Category</code></td>
+    <td><p>the searched category</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.getproductsby(pantry:)">
+    <h3>
+        <code><a href="#mypantrymodel.getproductsby(pantry:)">get​Products​By(pantry:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">getProductsBy</span>(<span class="variable">pantry</span>: <a href="Pantry/index.html"><span class="type">Pantry</span></a>) -&gt; [<a href="PantryItem/index.html"><span class="type">PantryItem</span></a>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns all the products which belongs to a certain <code>Pantry</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>pantry</th>
+    <td><code class="type">Pantry</code></td>
+    <td><p>the searched pantry</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>the list of products</p>
+
+</div>
+<div role="article" class="function" id="mypantrymodel.commit()">
+    <h3>
+        <code><a href="#mypantrymodel.commit()">commit()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">commit</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Commits the changes on the CoreData database</p>
+
+</div>
+</div>
+<div role="article" class="function" id="mypantrymodel.updatewidget()">
+    <h3>
+        <code><a href="#mypantrymodel.updatewidget()">update​Widget()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">updateWidget</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Tells iOS to update the widget shown in the home or the notification center of the device</p>
+
+</div>
+</div>
+<div role="article" class="function" id="mypantrymodel.rollback()">
+    <h3>
+        <code><a href="#mypantrymodel.rollback()">rollback()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">rollback</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Aborts the changes on the CoreData database</p>
+
+</div>
+</div>
+<div role="article" class="function" id="mypantrymodel.initapplication()">
+    <h3>
+        <code><a href="#mypantrymodel.initapplication()">init​Application()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">initApplication</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Initializes some categories and pantries in the CoreData database</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-11T17:39:28+0200">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPantry - ServerModel</title>
+    <link rel="stylesheet" type="text/css" href="../all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <strong>
+                MyPantry
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#servermodel.model">model</a></li><li class="variable"><a href="#servermodel.defaults">defaults</a></li><li class="variable"><a href="#servermodel.testmode">test​Mode</a></li><li class="variable"><a href="#servermodel.accesstoken">access​Token</a></li><li class="variable"><a href="#servermodel.sessiontoken">session​Token</a></li><li class="variable"><a href="#servermodel.username">username</a></li><li class="variable"><a href="#servermodel.password">password</a></li><li class="variable"><a href="#servermodel.email">email</a></li><li class="variable"><a href="#servermodel.registered">registered</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#servermodel.login()">login()</a></li><li class="function"><a href="#servermodel.searchproducts(withbarcode:)">search​Products(with​Barcode:​)</a></li><li class="function"><a href="#servermodel.pushnewpantryitem(newproduct:)">push​New​Pantry​Item(new​Product:​)</a></li><li class="function"><a href="#servermodel.pushproductpreference(preference:)">push​Product​Preference(preference:​)</a></li><li class="function"><a href="#servermodel.checklogindetails(email:password:)">check​Login​Details(email:​password:​)</a></li><li class="function"><a href="#servermodel.register(email:password:username:)">register(email:​password:​username:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Server​Model</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">class</span> <span class="type">ServerModel</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Handles the connection between MyPantry and the collaborative database</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="servermodel.model">
+    <h3>
+        <code><a href="#servermodel.model">model</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">model</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.defaults">
+    <h3>
+        <code><a href="#servermodel.defaults">defaults</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">defaults</span> = <span class="variable">MyPantryModel</span>.<span class="variable">model</span>.<span class="variable">defaults</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.testmode">
+    <h3>
+        <code><a href="#servermodel.testmode">test​Mode</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">let</span> <span class="variable">testMode</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>if set to yes, the products uploaded to the collaborative database will not be saved</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.accesstoken">
+    <h3>
+        <code><a href="#servermodel.accesstoken">access​Token</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">var</span> <span class="variable">accessToken</span> : <span class="type">String</span>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>stores an accesssToken for a user</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.sessiontoken">
+    <h3>
+        <code><a href="#servermodel.sessiontoken">session​Token</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span> <span class="keyword">var</span> <span class="variable">sessionToken</span> : <span class="type">String</span>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>stores the sessionToken for a barcode search</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.username">
+    <h3>
+        <code><a href="#servermodel.username">username</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">username</span> : <span class="type">String</span>?  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.password">
+    <h3>
+        <code><a href="#servermodel.password">password</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">password</span> : <span class="type">String</span>?  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.email">
+    <h3>
+        <code><a href="#servermodel.email">email</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">email</span> : <span class="type">String</span>?  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="servermodel.registered">
+    <h3>
+        <code><a href="#servermodel.registered">registered</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">registered</span> : <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="servermodel.login()">
+    <h3>
+        <code><a href="#servermodel.login()">login()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">login</span>() <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Tries to login on the collaborative database</p>
+
+</div>
+</div>
+<div role="article" class="function" id="servermodel.searchproducts(withbarcode:)">
+    <h3>
+        <code><a href="#servermodel.searchproducts(withbarcode:)">search​Products(with​Barcode:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">searchProducts</span>(<span class="variable">withBarcode</span> <span class="variable">barcode</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt;  [<span class="type">Product</span>]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Searches a barcode on the collaborative database</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Throws <code>ServerModelError</code></p>
+</li>
+<li>
+<p>Returns the list for products on the server</p>
+</li>
+</ul>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>barcode</th>
+    <td><code class="type">String</code></td>
+    <td><p>The barcode to be searched</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="servermodel.pushnewpantryitem(newproduct:)">
+    <h3>
+        <code><a href="#servermodel.pushnewpantryitem(newproduct:)">push​New​Pantry​Item(new​Product:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">pushNewPantryItem</span>(<span class="variable">newProduct</span> <span class="variable">item</span> : <a href="PantryItem/index.html"><span class="type">PantryItem</span></a>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adds a new product on the collaborative database</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>item</th>
+    <td><code class="type">Pantry​Item</code></td>
+    <td><p>the new product</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="servermodel.pushproductpreference(preference:)">
+    <h3>
+        <code><a href="#servermodel.pushproductpreference(preference:)">push​Product​Preference(preference:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">pushProductPreference</span>(<span class="variable">preference</span>: <a href="ServerModel/index.html"><span class="type">ServerModel</span></a>.<span class="type">Product</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Notifies the collaborative database about the choice made by the user</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>preference</th>
+    <td><code class="type">Server​Model.​Product</code></td>
+    <td><p>the chosen product</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="servermodel.checklogindetails(email:password:)">
+    <h3>
+        <code><a href="#servermodel.checklogindetails(email:password:)">check​Login​Details(email:​password:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">checkLoginDetails</span>(<span class="variable">email</span>: <span class="type">String</span>, <span class="variable">password</span>: <span class="type">String</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Checks on the remote server if the email and the password inserted are valid</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Throws <code>ServerModelError</code></p>
+</li>
+</ul>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>email</th>
+    <td><code class="type">String</code></td>
+    <td><p>the email to be checked</p>
+</td>
+</tr>
+<tr>
+    <th>password</th>
+    <td><code class="type">String</code></td>
+    <td><p>the password to be checked</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="servermodel.register(email:password:username:)">
+    <h3>
+        <code><a href="#servermodel.register(email:password:username:)">register(email:​password:​username:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">register</span>(<span class="variable">email</span>: <span class="type">String</span>, <span class="variable">password</span>: <span class="type">String</span>, <span class="variable">username</span>: <span class="type">String</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Registeres a new user on the collaborative database</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Throws <code>ServerModelError</code></p>
+</li>
+</ul>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>email</th>
+    <td><code class="type">String</code></td>
+    <td><p>email of the new user</p>
+</td>
+</tr>
+<tr>
+    <th>password</th>
+    <td><code class="type">String</code></td>
+    <td><p>password of the new user</p>
+</td>
+</tr>
+<tr>
+    <th>username</th>
+    <td><code class="type">String</code></td>
+    <td><p>username chosen by the new user</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-11T17:39:28+0200">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
