@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SPAlert",
+        "repositoryURL": "https://github.com/ivanvorobei/SPAlert",
+        "state": {
+          "branch": null,
+          "revision": "ed52ea8afe9d752ec357dfb57f3b32cf22f7d959",
+          "version": "3.0.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

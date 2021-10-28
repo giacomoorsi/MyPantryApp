@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H1030" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName=".Category" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Pantry" representedClassName=".Pantry" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PantryItem" representedClassName=".PantryItem" syncable="YES" codeGenerationType="category">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="consumed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="expireDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="opened" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="productDescription" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Category"/>
+        <relationship name="pantry" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Pantry"/>
+    </entity>
+    <entity name="ShoppingListItem" representedClassName=".ShoppingListItem" syncable="YES" codeGenerationType="category">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="productDescription" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Category"/>
+        <relationship name="pantry" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Pantry"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="14.359375" positionY="56.87890625" width="128" height="58"/>
+        <element name="Pantry" positionX="-445.67578125" positionY="-1.03125" width="128" height="58"/>
+        <element name="PantryItem" positionX="-254.41796875" positionY="-1.5234375" width="128" height="163"/>
+        <element name="ShoppingListItem" positionX="-230.37109375" positionY="235.28515625" width="128" height="118"/>
+    </elements>
+</model>

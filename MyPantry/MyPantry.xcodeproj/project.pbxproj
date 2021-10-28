@@ -1,0 +1,1240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E141F002652AC3E00417B6E /* PantriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E141EFF2652AC3E00417B6E /* PantriesTableViewController.swift */; };
+		7E141F052652ACC800417B6E /* Pantry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E141F042652ACC800417B6E /* Pantry.swift */; };
+		7E145297267267CD00C29A2F /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E145296267267CD00C29A2F /* UserTableViewController.swift */; };
+		7E24C1FD2671F0AE00F9F83C /* WelcomeScreenCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24C1FC2671F0AE00F9F83C /* WelcomeScreenCollectionViewController.swift */; };
+		7E3650B6265D96120025563A /* EditProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3650B5265D96120025563A /* EditProductTableViewController.swift */; };
+		7E3650BE265DA29F0025563A /* ProductPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3650BD265DA29F0025563A /* ProductPageProtocol.swift */; };
+		7E42FC9126625F22007DBFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E42FC9026625F22007DBFC6 /* Assets.xcassets */; };
+		7E42FC9826625F22007DBFC6 /* MyPantryWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E42FC9726625F22007DBFC6 /* MyPantryWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E42FC9D26625F22007DBFC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42FC9C26625F22007DBFC6 /* ContentView.swift */; };
+		7E42FC9F26625F22007DBFC6 /* MyPantryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42FC9E26625F22007DBFC6 /* MyPantryApp.swift */; };
+		7E42FCA126625F22007DBFC6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42FCA026625F22007DBFC6 /* ComplicationController.swift */; };
+		7E42FCA326625F25007DBFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E42FCA226625F25007DBFC6 /* Assets.xcassets */; };
+		7E42FCA626625F25007DBFC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E42FCA526625F25007DBFC6 /* Preview Assets.xcassets */; };
+		7E42FCAA26625F25007DBFC6 /* MyPantryWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E42FC8E26625F1F007DBFC6 /* MyPantryWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E42FCCF26625F85007DBFC6 /* MyPantryWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42FCCE26625F85007DBFC6 /* MyPantryWatchModel.swift */; };
+		7E42FCDF26627CF7007DBFC6 /* WatchConnectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42FCDE26627CF7007DBFC6 /* WatchConnectionModel.swift */; };
+		7E493E1E2672A4E80056065B /* UserRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E493E1D2672A4E30056065B /* UserRegistrationTableViewController.swift */; };
+		7E4ECC83264813A70050F6DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECC82264813A70050F6DA /* AppDelegate.swift */; };
+		7E4ECC85264813A70050F6DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECC84264813A70050F6DA /* SceneDelegate.swift */; };
+		7E4ECC8A264813A70050F6DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4ECC88264813A70050F6DA /* Main.storyboard */; };
+		7E4ECC8D264813A70050F6DA /* MyPantry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECC8B264813A70050F6DA /* MyPantry.xcdatamodeld */; };
+		7E4ECC8F264813A90050F6DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4ECC8E264813A90050F6DA /* Assets.xcassets */; };
+		7E4ECC92264813A90050F6DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4ECC90264813A90050F6DA /* LaunchScreen.storyboard */; };
+		7E4ECC9D264813AA0050F6DA /* MyPantryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECC9C264813AA0050F6DA /* MyPantryTests.swift */; };
+		7E4ECCA8264813AA0050F6DA /* MyPantryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECCA7264813AA0050F6DA /* MyPantryUITests.swift */; };
+		7E4ECCB926481FC50050F6DA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECCB826481FC50050F6DA /* SettingsTableViewController.swift */; };
+		7E4ECCBE264820DA0050F6DA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ECCBD264820DA0050F6DA /* HomeTableViewController.swift */; };
+		7E4ECCCF26482BC00050F6DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4ECCCE26482BC00050F6DA /* AVFoundation.framework */; };
+		7E6BB6E226643D600078FC46 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BB6E126643D600078FC46 /* BarcodeScannerView.swift */; };
+		7E6BB6EA26643D910078FC46 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BB6E926643D910078FC46 /* ScannerViewController.swift */; };
+		7E7682A4265AC332001C824D /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7682A3265AC332001C824D /* PantryItem.swift */; };
+		7E827AE8264938A80011C438 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E827AE7264938A80011C438 /* Category.swift */; };
+		7E9AF3082659AF120075358A /* InsertProductDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AF3072659AF120075358A /* InsertProductDescriptionTableViewController.swift */; };
+		7EB911AE265FFC33009EED36 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB911AD265FFC33009EED36 /* SPAlert */; };
+		7EC34A7E2662A032005EAC7B /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC34A7D2662A032005EAC7B /* ShoppingListTableViewController.swift */; };
+		7EC34A862662A650005EAC7B /* ShoppingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC34A852662A650005EAC7B /* ShoppingListItem.swift */; };
+		7EC6A432265569A800C0E997 /* InsertProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A431265569A800C0E997 /* InsertProductTableViewController.swift */; };
+		7ECD535C265AE8C50005C3CB /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD535B265AE8C50005C3CB /* ProductsTableViewController.swift */; };
+		7ED4C0942654574E00BEBA68 /* ChooseCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED4C0932654574E00BEBA68 /* ChooseCategoryTableViewController.swift */; };
+		7EDA0D7626487F7000F91FC1 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA0D7526487F7000F91FC1 /* CategoriesTableViewController.swift */; };
+		7EDA0D862648831400F91FC1 /* MyPantryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA0D852648831400F91FC1 /* MyPantryModel.swift */; };
+		7EDE81B72661950800CD8442 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB911B726600C16009EED36 /* WidgetKit.framework */; };
+		7EDE81B82661950800CD8442 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB911B926600C16009EED36 /* SwiftUI.framework */; };
+		7EDE81BB2661950800CD8442 /* MyPantryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE81BA2661950800CD8442 /* MyPantryWidget.swift */; };
+		7EDE81BE2661950C00CD8442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE81BD2661950C00CD8442 /* Assets.xcassets */; };
+		7EDE81C02661950C00CD8442 /* MyPantryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE81BC2661950800CD8442 /* MyPantryWidget.intentdefinition */; };
+		7EDE81C12661950C00CD8442 /* MyPantryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE81BC2661950800CD8442 /* MyPantryWidget.intentdefinition */; };
+		7EDE81C42661950C00CD8442 /* MyPantryWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7EDE81B62661950800CD8442 /* MyPantryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7EE93BE02673F7EE0049CAD9 /* ShoppingListAddProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE93BDF2673F7ED0049CAD9 /* ShoppingListAddProductTableViewController.swift */; };
+		7EF87F2B2655A6EA00078611 /* SearchProductsByBarcodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF87F2A2655A6EA00078611 /* SearchProductsByBarcodeTableViewController.swift */; };
+		7EF87F302655A74000078611 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF87F2F2655A74000078611 /* ServerModel.swift */; };
+		7EF87F352655B14A00078611 /* InsertBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF87F342655B14A00078611 /* InsertBarcodeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E42FC9926625F22007DBFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4ECC77264813A70050F6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E42FC9626625F22007DBFC6;
+			remoteInfo = "MyPantryWatch Extension";
+		};
+		7E42FCA826625F25007DBFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4ECC77264813A70050F6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E42FC8D26625F1F007DBFC6;
+			remoteInfo = MyPantryWatch;
+		};
+		7E4ECC99264813AA0050F6DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4ECC77264813A70050F6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E4ECC7E264813A70050F6DA;
+			remoteInfo = MyPantry;
+		};
+		7E4ECCA4264813AA0050F6DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4ECC77264813A70050F6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E4ECC7E264813A70050F6DA;
+			remoteInfo = MyPantry;
+		};
+		7EDE81C22661950C00CD8442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E4ECC77264813A70050F6DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EDE81B52661950800CD8442;
+			remoteInfo = MyPantryWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E42FC082662553B007DBFC6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7E42FCAA26625F25007DBFC6 /* MyPantryWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E42FCAE26625F25007DBFC6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E42FC9826625F22007DBFC6 /* MyPantryWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB911CA26600C19009EED36 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7EDE81C42661950C00CD8442 /* MyPantryWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7E141EFF2652AC3E00417B6E /* PantriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantriesTableViewController.swift; sourceTree = "<group>"; };
+		7E141F042652ACC800417B6E /* Pantry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pantry.swift; sourceTree = "<group>"; };
+		7E145296267267CD00C29A2F /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		7E24C1FC2671F0AE00F9F83C /* WelcomeScreenCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCollectionViewController.swift; sourceTree = "<group>"; };
+		7E3650B5265D96120025563A /* EditProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductTableViewController.swift; sourceTree = "<group>"; };
+		7E3650BD265DA29F0025563A /* ProductPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageProtocol.swift; sourceTree = "<group>"; };
+		7E42FC8E26625F1F007DBFC6 /* MyPantryWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPantryWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E42FC9026625F22007DBFC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E42FC9226625F22007DBFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E42FC9726625F22007DBFC6 /* MyPantryWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyPantryWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E42FC9C26625F22007DBFC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E42FC9E26625F22007DBFC6 /* MyPantryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryApp.swift; sourceTree = "<group>"; };
+		7E42FCA026625F22007DBFC6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7E42FCA226625F25007DBFC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E42FCA526625F25007DBFC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E42FCA726625F25007DBFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E42FCB826625F30007DBFC6 /* MyPantryWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyPantryWatch Extension.entitlements"; sourceTree = "<group>"; };
+		7E42FCB926625F38007DBFC6 /* MyPantryWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPantryWatch.entitlements; sourceTree = "<group>"; };
+		7E42FCCE26625F85007DBFC6 /* MyPantryWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryWatchModel.swift; sourceTree = "<group>"; };
+		7E42FCDE26627CF7007DBFC6 /* WatchConnectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WatchConnectionModel.swift; path = MyPantry/Models/WatchConnectionModel.swift; sourceTree = SOURCE_ROOT; };
+		7E493E1D2672A4E30056065B /* UserRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		7E4ECC7F264813A70050F6DA /* MyPantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4ECC82264813A70050F6DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E4ECC84264813A70050F6DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7E4ECC89264813A70050F6DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E4ECC8C264813A70050F6DA /* MyPantry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyPantry.xcdatamodel; sourceTree = "<group>"; };
+		7E4ECC8E264813A90050F6DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E4ECC91264813A90050F6DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E4ECC93264813A90050F6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4ECC98264813AA0050F6DA /* MyPantryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPantryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4ECC9C264813AA0050F6DA /* MyPantryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryTests.swift; sourceTree = "<group>"; };
+		7E4ECC9E264813AA0050F6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4ECCA3264813AA0050F6DA /* MyPantryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPantryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4ECCA7264813AA0050F6DA /* MyPantryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryUITests.swift; sourceTree = "<group>"; };
+		7E4ECCA9264813AA0050F6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4ECCB826481FC50050F6DA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7E4ECCBD264820DA0050F6DA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		7E4ECCCE26482BC00050F6DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7E6BB6E126643D600078FC46 /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		7E6BB6E926643D910078FC46 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		7E71F5F02661553000EEAA48 /* MyPantry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPantry.entitlements; sourceTree = "<group>"; };
+		7E7682A3265AC332001C824D /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
+		7E827AE7264938A80011C438 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7E9AF3072659AF120075358A /* InsertProductDescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductDescriptionTableViewController.swift; sourceTree = "<group>"; };
+		7EB911B726600C16009EED36 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7EB911B926600C16009EED36 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7EC34A7D2662A032005EAC7B /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		7EC34A852662A650005EAC7B /* ShoppingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItem.swift; sourceTree = "<group>"; };
+		7EC6A431265569A800C0E997 /* InsertProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductTableViewController.swift; sourceTree = "<group>"; };
+		7ECD535B265AE8C50005C3CB /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		7ED4C0932654574E00BEBA68 /* ChooseCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryTableViewController.swift; sourceTree = "<group>"; };
+		7EDA0D7526487F7000F91FC1 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		7EDA0D852648831400F91FC1 /* MyPantryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryModel.swift; sourceTree = "<group>"; };
+		7EDE81B62661950800CD8442 /* MyPantryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPantryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDE81BA2661950800CD8442 /* MyPantryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPantryWidget.swift; sourceTree = "<group>"; };
+		7EDE81BC2661950800CD8442 /* MyPantryWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MyPantryWidget.intentdefinition; sourceTree = "<group>"; };
+		7EDE81BD2661950C00CD8442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EDE81BF2661950C00CD8442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EDE81CC2661951300CD8442 /* MyPantryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPantryWidgetExtension.entitlements; sourceTree = "<group>"; };
+		7EE93BDF2673F7ED0049CAD9 /* ShoppingListAddProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListAddProductTableViewController.swift; sourceTree = "<group>"; };
+		7EF87F2A2655A6EA00078611 /* SearchProductsByBarcodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsByBarcodeTableViewController.swift; sourceTree = "<group>"; };
+		7EF87F2F2655A74000078611 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		7EF87F342655B14A00078611 /* InsertBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertBarcodeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E42FC9426625F22007DBFC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC7C264813A70050F6DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB911AE265FFC33009EED36 /* SPAlert in Frameworks */,
+				7E4ECCCF26482BC00050F6DA /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC95264813AA0050F6DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECCA0264813AA0050F6DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EDE81B32661950800CD8442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDE81B82661950800CD8442 /* SwiftUI.framework in Frameworks */,
+				7EDE81B72661950800CD8442 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E1A6EDE26737DE9000D1883 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E6BB6E126643D600078FC46 /* BarcodeScannerView.swift */,
+				7EDA0D7526487F7000F91FC1 /* CategoriesTableViewController.swift */,
+				7ED4C0932654574E00BEBA68 /* ChooseCategoryTableViewController.swift */,
+				7E3650B5265D96120025563A /* EditProductTableViewController.swift */,
+				7E4ECCBD264820DA0050F6DA /* HomeTableViewController.swift */,
+				7EF87F342655B14A00078611 /* InsertBarcodeViewController.swift */,
+				7E9AF3072659AF120075358A /* InsertProductDescriptionTableViewController.swift */,
+				7EC6A431265569A800C0E997 /* InsertProductTableViewController.swift */,
+				7E141EFF2652AC3E00417B6E /* PantriesTableViewController.swift */,
+				7E3650BD265DA29F0025563A /* ProductPageProtocol.swift */,
+				7ECD535B265AE8C50005C3CB /* ProductsTableViewController.swift */,
+				7E6BB6E926643D910078FC46 /* ScannerViewController.swift */,
+				7EF87F2A2655A6EA00078611 /* SearchProductsByBarcodeTableViewController.swift */,
+				7E4ECCB826481FC50050F6DA /* SettingsTableViewController.swift */,
+				7EC34A7D2662A032005EAC7B /* ShoppingListTableViewController.swift */,
+				7EE93BDF2673F7ED0049CAD9 /* ShoppingListAddProductTableViewController.swift */,
+				7E493E1D2672A4E30056065B /* UserRegistrationTableViewController.swift */,
+				7E145296267267CD00C29A2F /* UserTableViewController.swift */,
+				7E24C1FC2671F0AE00F9F83C /* WelcomeScreenCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E1A6EEB26737E42000D1883 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7E827AE7264938A80011C438 /* Category.swift */,
+				7E141F042652ACC800417B6E /* Pantry.swift */,
+				7E7682A3265AC332001C824D /* PantryItem.swift */,
+				7EC34A852662A650005EAC7B /* ShoppingListItem.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		7E42FC8F26625F1F007DBFC6 /* MyPantryWatch */ = {
+			isa = PBXGroup;
+			children = (
+				7E42FCB926625F38007DBFC6 /* MyPantryWatch.entitlements */,
+				7E42FC9026625F22007DBFC6 /* Assets.xcassets */,
+				7E42FC9226625F22007DBFC6 /* Info.plist */,
+			);
+			path = MyPantryWatch;
+			sourceTree = "<group>";
+		};
+		7E42FC9B26625F22007DBFC6 /* MyPantryWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E42FCB826625F30007DBFC6 /* MyPantryWatch Extension.entitlements */,
+				7E42FC9C26625F22007DBFC6 /* ContentView.swift */,
+				7E42FCCE26625F85007DBFC6 /* MyPantryWatchModel.swift */,
+				7E42FC9E26625F22007DBFC6 /* MyPantryApp.swift */,
+				7E42FCA026625F22007DBFC6 /* ComplicationController.swift */,
+				7E42FCA226625F25007DBFC6 /* Assets.xcassets */,
+				7E42FCA726625F25007DBFC6 /* Info.plist */,
+				7E42FCA426625F25007DBFC6 /* Preview Content */,
+			);
+			path = "MyPantryWatch Extension";
+			sourceTree = "<group>";
+		};
+		7E42FCA426625F25007DBFC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7E42FCA526625F25007DBFC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E4ECC76264813A70050F6DA = {
+			isa = PBXGroup;
+			children = (
+				7EDE81CC2661951300CD8442 /* MyPantryWidgetExtension.entitlements */,
+				7E4ECC81264813A70050F6DA /* MyPantry */,
+				7E4ECC9B264813AA0050F6DA /* MyPantryTests */,
+				7E4ECCA6264813AA0050F6DA /* MyPantryUITests */,
+				7EDE81B92661950800CD8442 /* MyPantryWidget */,
+				7E42FC8F26625F1F007DBFC6 /* MyPantryWatch */,
+				7E42FC9B26625F22007DBFC6 /* MyPantryWatch Extension */,
+				7E4ECC80264813A70050F6DA /* Products */,
+				7E4ECCCD26482BC00050F6DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E4ECC80264813A70050F6DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E4ECC7F264813A70050F6DA /* MyPantry.app */,
+				7E4ECC98264813AA0050F6DA /* MyPantryTests.xctest */,
+				7E4ECCA3264813AA0050F6DA /* MyPantryUITests.xctest */,
+				7EDE81B62661950800CD8442 /* MyPantryWidgetExtension.appex */,
+				7E42FC8E26625F1F007DBFC6 /* MyPantryWatch.app */,
+				7E42FC9726625F22007DBFC6 /* MyPantryWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E4ECC81264813A70050F6DA /* MyPantry */ = {
+			isa = PBXGroup;
+			children = (
+				7E71F60D26618F4100EEAA48 /* Models */,
+				7E1A6EEB26737E42000D1883 /* Objects */,
+				7E1A6EDE26737DE9000D1883 /* ViewControllers */,
+				7E4ECC8E264813A90050F6DA /* Assets.xcassets */,
+				7E4ECC82264813A70050F6DA /* AppDelegate.swift */,
+				7E4ECC84264813A70050F6DA /* SceneDelegate.swift */,
+				7E4ECC90264813A90050F6DA /* LaunchScreen.storyboard */,
+				7E4ECC88264813A70050F6DA /* Main.storyboard */,
+				7E71F5F02661553000EEAA48 /* MyPantry.entitlements */,
+				7E4ECC8B264813A70050F6DA /* MyPantry.xcdatamodeld */,
+				7E4ECC93264813A90050F6DA /* Info.plist */,
+			);
+			path = MyPantry;
+			sourceTree = "<group>";
+		};
+		7E4ECC9B264813AA0050F6DA /* MyPantryTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E4ECC9C264813AA0050F6DA /* MyPantryTests.swift */,
+				7E4ECC9E264813AA0050F6DA /* Info.plist */,
+			);
+			path = MyPantryTests;
+			sourceTree = "<group>";
+		};
+		7E4ECCA6264813AA0050F6DA /* MyPantryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E4ECCA7264813AA0050F6DA /* MyPantryUITests.swift */,
+				7E4ECCA9264813AA0050F6DA /* Info.plist */,
+			);
+			path = MyPantryUITests;
+			sourceTree = "<group>";
+		};
+		7E4ECCCD26482BC00050F6DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E4ECCCE26482BC00050F6DA /* AVFoundation.framework */,
+				7EB911B726600C16009EED36 /* WidgetKit.framework */,
+				7EB911B926600C16009EED36 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E71F60D26618F4100EEAA48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EDA0D852648831400F91FC1 /* MyPantryModel.swift */,
+				7EF87F2F2655A74000078611 /* ServerModel.swift */,
+				7E42FCDE26627CF7007DBFC6 /* WatchConnectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EDE81B92661950800CD8442 /* MyPantryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				7EDE81BA2661950800CD8442 /* MyPantryWidget.swift */,
+				7EDE81BC2661950800CD8442 /* MyPantryWidget.intentdefinition */,
+				7EDE81BD2661950C00CD8442 /* Assets.xcassets */,
+				7EDE81BF2661950C00CD8442 /* Info.plist */,
+			);
+			path = MyPantryWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E42FC8D26625F1F007DBFC6 /* MyPantryWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E42FCAF26625F25007DBFC6 /* Build configuration list for PBXNativeTarget "MyPantryWatch" */;
+			buildPhases = (
+				7E42FC8C26625F1F007DBFC6 /* Resources */,
+				7E42FCAE26625F25007DBFC6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E42FC9A26625F22007DBFC6 /* PBXTargetDependency */,
+			);
+			name = MyPantryWatch;
+			productName = MyPantryWatch;
+			productReference = 7E42FC8E26625F1F007DBFC6 /* MyPantryWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7E42FC9626625F22007DBFC6 /* MyPantryWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E42FCAB26625F25007DBFC6 /* Build configuration list for PBXNativeTarget "MyPantryWatch Extension" */;
+			buildPhases = (
+				7E42FC9326625F22007DBFC6 /* Sources */,
+				7E42FC9426625F22007DBFC6 /* Frameworks */,
+				7E42FC9526625F22007DBFC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyPantryWatch Extension";
+			productName = "MyPantryWatch Extension";
+			productReference = 7E42FC9726625F22007DBFC6 /* MyPantryWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		7E4ECC7E264813A70050F6DA /* MyPantry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E4ECCAC264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantry" */;
+			buildPhases = (
+				7E4ECC7B264813A70050F6DA /* Sources */,
+				7E4ECC7C264813A70050F6DA /* Frameworks */,
+				7E4ECC7D264813A70050F6DA /* Resources */,
+				7EB911CA26600C19009EED36 /* Embed App Extensions */,
+				7E42FC082662553B007DBFC6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EDE81C32661950C00CD8442 /* PBXTargetDependency */,
+				7E42FCA926625F25007DBFC6 /* PBXTargetDependency */,
+			);
+			name = MyPantry;
+			packageProductDependencies = (
+				7EB911AD265FFC33009EED36 /* SPAlert */,
+			);
+			productName = MyPantry;
+			productReference = 7E4ECC7F264813A70050F6DA /* MyPantry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E4ECC97264813AA0050F6DA /* MyPantryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E4ECCAF264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantryTests" */;
+			buildPhases = (
+				7E4ECC94264813AA0050F6DA /* Sources */,
+				7E4ECC95264813AA0050F6DA /* Frameworks */,
+				7E4ECC96264813AA0050F6DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E4ECC9A264813AA0050F6DA /* PBXTargetDependency */,
+			);
+			name = MyPantryTests;
+			productName = MyPantryTests;
+			productReference = 7E4ECC98264813AA0050F6DA /* MyPantryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E4ECCA2264813AA0050F6DA /* MyPantryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E4ECCB2264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantryUITests" */;
+			buildPhases = (
+				7E4ECC9F264813AA0050F6DA /* Sources */,
+				7E4ECCA0264813AA0050F6DA /* Frameworks */,
+				7E4ECCA1264813AA0050F6DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E4ECCA5264813AA0050F6DA /* PBXTargetDependency */,
+			);
+			name = MyPantryUITests;
+			productName = MyPantryUITests;
+			productReference = 7E4ECCA3264813AA0050F6DA /* MyPantryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7EDE81B52661950800CD8442 /* MyPantryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EDE81C52661950C00CD8442 /* Build configuration list for PBXNativeTarget "MyPantryWidgetExtension" */;
+			buildPhases = (
+				7EDE81B22661950800CD8442 /* Sources */,
+				7EDE81B32661950800CD8442 /* Frameworks */,
+				7EDE81B42661950800CD8442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPantryWidgetExtension;
+			productName = MyPantryWidgetExtension;
+			productReference = 7EDE81B62661950800CD8442 /* MyPantryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E4ECC77264813A70050F6DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					7E42FC8D26625F1F007DBFC6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7E42FC9626625F22007DBFC6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7E4ECC7E264813A70050F6DA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7E4ECC97264813AA0050F6DA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7E4ECC7E264813A70050F6DA;
+					};
+					7E4ECCA2264813AA0050F6DA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7E4ECC7E264813A70050F6DA;
+					};
+					7EDE81B52661950800CD8442 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 7E4ECC7A264813A70050F6DA /* Build configuration list for PBXProject "MyPantry" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E4ECC76264813A70050F6DA;
+			packageReferences = (
+				7EB911AC265FFC32009EED36 /* XCRemoteSwiftPackageReference "SPAlert" */,
+			);
+			productRefGroup = 7E4ECC80264813A70050F6DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E4ECC7E264813A70050F6DA /* MyPantry */,
+				7E4ECC97264813AA0050F6DA /* MyPantryTests */,
+				7E4ECCA2264813AA0050F6DA /* MyPantryUITests */,
+				7EDE81B52661950800CD8442 /* MyPantryWidgetExtension */,
+				7E42FC8D26625F1F007DBFC6 /* MyPantryWatch */,
+				7E42FC9626625F22007DBFC6 /* MyPantryWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E42FC8C26625F1F007DBFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E42FC9126625F22007DBFC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E42FC9526625F22007DBFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E42FCA626625F25007DBFC6 /* Preview Assets.xcassets in Resources */,
+				7E42FCA326625F25007DBFC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC7D264813A70050F6DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4ECC92264813A90050F6DA /* LaunchScreen.storyboard in Resources */,
+				7E4ECC8F264813A90050F6DA /* Assets.xcassets in Resources */,
+				7E4ECC8A264813A70050F6DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC96264813AA0050F6DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECCA1264813AA0050F6DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EDE81B42661950800CD8442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDE81BE2661950C00CD8442 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E42FC9326625F22007DBFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E42FC9D26625F22007DBFC6 /* ContentView.swift in Sources */,
+				7E42FC9F26625F22007DBFC6 /* MyPantryApp.swift in Sources */,
+				7E42FCA126625F22007DBFC6 /* ComplicationController.swift in Sources */,
+				7E42FCCF26625F85007DBFC6 /* MyPantryWatchModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC7B264813A70050F6DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDE81C12661950C00CD8442 /* MyPantryWidget.intentdefinition in Sources */,
+				7E4ECCBE264820DA0050F6DA /* HomeTableViewController.swift in Sources */,
+				7EF87F2B2655A6EA00078611 /* SearchProductsByBarcodeTableViewController.swift in Sources */,
+				7E827AE8264938A80011C438 /* Category.swift in Sources */,
+				7E6BB6EA26643D910078FC46 /* ScannerViewController.swift in Sources */,
+				7E3650B6265D96120025563A /* EditProductTableViewController.swift in Sources */,
+				7EF87F302655A74000078611 /* ServerModel.swift in Sources */,
+				7EC34A862662A650005EAC7B /* ShoppingListItem.swift in Sources */,
+				7E4ECCB926481FC50050F6DA /* SettingsTableViewController.swift in Sources */,
+				7E145297267267CD00C29A2F /* UserTableViewController.swift in Sources */,
+				7E42FCDF26627CF7007DBFC6 /* WatchConnectionModel.swift in Sources */,
+				7EC6A432265569A800C0E997 /* InsertProductTableViewController.swift in Sources */,
+				7E7682A4265AC332001C824D /* PantryItem.swift in Sources */,
+				7E141F002652AC3E00417B6E /* PantriesTableViewController.swift in Sources */,
+				7ECD535C265AE8C50005C3CB /* ProductsTableViewController.swift in Sources */,
+				7E493E1E2672A4E80056065B /* UserRegistrationTableViewController.swift in Sources */,
+				7EC34A7E2662A032005EAC7B /* ShoppingListTableViewController.swift in Sources */,
+				7EDA0D862648831400F91FC1 /* MyPantryModel.swift in Sources */,
+				7E9AF3082659AF120075358A /* InsertProductDescriptionTableViewController.swift in Sources */,
+				7ED4C0942654574E00BEBA68 /* ChooseCategoryTableViewController.swift in Sources */,
+				7E6BB6E226643D600078FC46 /* BarcodeScannerView.swift in Sources */,
+				7EDA0D7626487F7000F91FC1 /* CategoriesTableViewController.swift in Sources */,
+				7E4ECC8D264813A70050F6DA /* MyPantry.xcdatamodeld in Sources */,
+				7EF87F352655B14A00078611 /* InsertBarcodeViewController.swift in Sources */,
+				7E4ECC83264813A70050F6DA /* AppDelegate.swift in Sources */,
+				7EE93BE02673F7EE0049CAD9 /* ShoppingListAddProductTableViewController.swift in Sources */,
+				7E141F052652ACC800417B6E /* Pantry.swift in Sources */,
+				7E4ECC85264813A70050F6DA /* SceneDelegate.swift in Sources */,
+				7E24C1FD2671F0AE00F9F83C /* WelcomeScreenCollectionViewController.swift in Sources */,
+				7E3650BE265DA29F0025563A /* ProductPageProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC94264813AA0050F6DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4ECC9D264813AA0050F6DA /* MyPantryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4ECC9F264813AA0050F6DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4ECCA8264813AA0050F6DA /* MyPantryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EDE81B22661950800CD8442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDE81C02661950C00CD8442 /* MyPantryWidget.intentdefinition in Sources */,
+				7EDE81BB2661950800CD8442 /* MyPantryWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E42FC9A26625F22007DBFC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E42FC9626625F22007DBFC6 /* MyPantryWatch Extension */;
+			targetProxy = 7E42FC9926625F22007DBFC6 /* PBXContainerItemProxy */;
+		};
+		7E42FCA926625F25007DBFC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E42FC8D26625F1F007DBFC6 /* MyPantryWatch */;
+			targetProxy = 7E42FCA826625F25007DBFC6 /* PBXContainerItemProxy */;
+		};
+		7E4ECC9A264813AA0050F6DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E4ECC7E264813A70050F6DA /* MyPantry */;
+			targetProxy = 7E4ECC99264813AA0050F6DA /* PBXContainerItemProxy */;
+		};
+		7E4ECCA5264813AA0050F6DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E4ECC7E264813A70050F6DA /* MyPantry */;
+			targetProxy = 7E4ECCA4264813AA0050F6DA /* PBXContainerItemProxy */;
+		};
+		7EDE81C32661950C00CD8442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EDE81B52661950800CD8442 /* MyPantryWidgetExtension */;
+			targetProxy = 7EDE81C22661950C00CD8442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E4ECC88264813A70050F6DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E4ECC89264813A70050F6DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E4ECC90264813A90050F6DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E4ECC91264813A90050F6DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E42FCAC26625F25007DBFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MyPantryWatch Extension/MyPantryWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyPantryWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyPantryWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7E42FCAD26625F25007DBFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MyPantryWatch Extension/MyPantryWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyPantryWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyPantryWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7E42FCB026625F25007DBFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyPantryWatch/MyPantryWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				IBSC_MODULE = MyPantryWatch_Extension;
+				INFOPLIST_FILE = MyPantryWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7E42FCB126625F25007DBFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyPantryWatch/MyPantryWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				IBSC_MODULE = MyPantryWatch_Extension;
+				INFOPLIST_FILE = MyPantryWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7E4ECCAA264813AA0050F6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[sdk=iphonesimulator*]" = IOS_SIMULATOR;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E4ECCAB264813AA0050F6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E4ECCAD264813AA0050F6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyPantry/MyPantry.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E4ECCAE264813AA0050F6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyPantry/MyPantry.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E4ECCB0264813AA0050F6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPantry.app/MyPantry";
+			};
+			name = Debug;
+		};
+		7E4ECCB1264813AA0050F6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPantry.app/MyPantry";
+			};
+			name = Release;
+		};
+		7E4ECCB3264813AA0050F6DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyPantry;
+			};
+			name = Debug;
+		};
+		7E4ECCB4264813AA0050F6DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyPantry;
+			};
+			name = Release;
+		};
+		7EDE81C62661950C00CD8442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MyPantryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.MyPantryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EDE81C72661950C00CD8442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MyPantryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4V4A53LNT;
+				INFOPLIST_FILE = MyPantryWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giacomoorsi.MyPantry.MyPantryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E42FCAB26625F25007DBFC6 /* Build configuration list for PBXNativeTarget "MyPantryWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E42FCAC26625F25007DBFC6 /* Debug */,
+				7E42FCAD26625F25007DBFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E42FCAF26625F25007DBFC6 /* Build configuration list for PBXNativeTarget "MyPantryWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E42FCB026625F25007DBFC6 /* Debug */,
+				7E42FCB126625F25007DBFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E4ECC7A264813A70050F6DA /* Build configuration list for PBXProject "MyPantry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E4ECCAA264813AA0050F6DA /* Debug */,
+				7E4ECCAB264813AA0050F6DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E4ECCAC264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E4ECCAD264813AA0050F6DA /* Debug */,
+				7E4ECCAE264813AA0050F6DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E4ECCAF264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E4ECCB0264813AA0050F6DA /* Debug */,
+				7E4ECCB1264813AA0050F6DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E4ECCB2264813AA0050F6DA /* Build configuration list for PBXNativeTarget "MyPantryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E4ECCB3264813AA0050F6DA /* Debug */,
+				7E4ECCB4264813AA0050F6DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EDE81C52661950C00CD8442 /* Build configuration list for PBXNativeTarget "MyPantryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EDE81C62661950C00CD8442 /* Debug */,
+				7EDE81C72661950C00CD8442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7EB911AC265FFC32009EED36 /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPAlert";
+			requirement = {
+				kind = exactVersion;
+				version = 3.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EB911AD265FFC33009EED36 /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EB911AC265FFC32009EED36 /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7E4ECC8B264813A70050F6DA /* MyPantry.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E4ECC8C264813A70050F6DA /* MyPantry.xcdatamodel */,
+			);
+			currentVersion = 7E4ECC8C264813A70050F6DA /* MyPantry.xcdatamodel */;
+			path = MyPantry.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7E4ECC77264813A70050F6DA /* Project object */;
+}
