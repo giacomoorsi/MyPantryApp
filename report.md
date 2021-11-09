@@ -1,188 +1,84 @@
----
-abstract: |
-  Questo documento descrive le funzionalità e le strategie di
-  implementazione adottate nello sviluppo dell'applicazione iOS
-  *MyPantry*, realizzata per il corso [Laboratorio Applicazioni
-  Mobili](https://www.unibo.it/it/didattica/insegnamenti/insegnamento/2020/367016)
-  dell'Alma Mater Studiorum -- Università di Bologna, anno accademico
-  2020/2021.
-author:
-- Giacomo Orsi
-date: giacomo.orsi2\@studio.unibo.it -- matricola 875105
-title: Progetto Laboratorio Applicazioni Mobili
----
 
-# Introduzione {#introduzione .unnumbered}
+# Introduction 
 
-Il progetto realizzato è costituito da un'applicazione, chiamata
-*MyPantry*, per dispositivi iOS (iPhone, iPad, iPod Touch) che permette
-all'utilizzatore di monitorare il contenuto della sua dispensa.
+This document describes the functionality and implementation strategies adopted in the development of the iOS app MyPantry, that I developed as a project for the course [Mobile Applications Lab](https://www.unibo.it/it/didattica/insegnamenti/insegnamento/2020/367016)
+at the University of Bologna, academic year 2020/2021.
 
-Il sistema è stato realizzato utilizzando:
+The project is consists of an app called MyPantry, for iOS devices (iPhone, iPad, iPod Touch) which allows the user to monitor the contents of his/her larder.
+
+The system was implemented using:
 
 -   Xcode 12.4 (build `12D4e`)
 
 -   Swift 5
 
-<div style="text-align: center">
-<img src="img/mypantry-logo.png" alt="L'icona di *MyPantry*" style="width:200px; text-align:center"/>
-</div>
+<img src="img/mypantry-logo.png" alt="L'icona di MyPantry" style="width:200px"/>
 
-# Funzionalità
+# Functionalities
 
-L'applicazione *MyPantry* permette all'utente di inserire i prodotti
-alimentari acquistati e tenere traccia del loro consumo. Nei paragrafi
-successivi vengono descritte le funzionalità dell'applicazione. Nella
-figura 2 è possibile vedere la home dell'applicazione su iPhone e su
-Apple Watch.
+The MyPantry application allows the user to enter food products purchased and keep track of their consumption. The following paragraphs describe the functionality of the application. Figure 2 shows the home page of the application on the iPhone and on Apple Watch.
 
-![L'home di *MyPantry*](home){width="0.25\\paperwidth"}
+<img src="img/home.png" alt="Home" style="width:80%"/>
 
-![L'home di *MyPantry*](home-watch){width="0.17\\paperwidth"}
 
-## Inserimento dei prodotti
+## Products insertion
 
-L'inserimento dei prodotti avviene attraverso la scansione o la
-digitazione del *barcode* del prodotto. L'applicazione accede ad un
-*database* remoto collaborativo per verificare se sia presente un
-prodotto associato a quell'identificativo. Qualora siano presenti più
-prodotti, all'utente viene data la possibilità di scegliere il prodotto
-corretto e la scelta viene registrata sul database condiviso, come
-descritto nel paragrafo [2.1.1](#database-remoto){reference-type="ref"
-reference="database-remoto"}.
+Products are entered by scanning or typing in the product *barcode*. The application accesses a remote collaborative *database* (managed by the University) to check if there is a product associated with that identifier. If more than one product is present, the user is given the opportunity to choose the correct product and the choice is recorded on the shared database, as described in the paragraph below. 
 
-Nel caso in cui nessuno dei prodotti inseriti sul database corrisponda
-al prodotto corretto o qualora non sia presente nessuna corrispondenza
-per il *barcode* ricercato, l'utente può aggiungere un nuovo prodotto,
-che viene messo a disposizione degli altri utenti e dunque caricato sul
-database condiviso. I prodotti contenuti nella dispensa dell'utente,
-invece, vengono memorizzati su un database locale, come descritto nel
-capitolo [2.1.2](#database-locale){reference-type="ref"
-reference="database-locale"}.
-[\[introduzione-database\]]{#introduzione-database
-label="introduzione-database"}
+**Note** I cannot guarantee that the remote server will be accessible in the future.
 
-![Fasi dell'inserimento di un
-prodotto](inserimento-1){width="0.25\\paperwidth"}
+<img src="img/insert-phases.png" alt="Insert phases" style="width:100%"/>
 
-![Fasi dell'inserimento di un
-prodotto](inserimento-2){width="0.25\\paperwidth"}
 
-![Fasi dell'inserimento di un
-prodotto](inserimento-3){width="0.25\\paperwidth"}
+## Pantry organization
 
-## Organizzazione della dispensa
+When the user enters a product he can specify an area of the house in which to store it (e.g. the fridge, the freezer, a certain cupboard,...) and a category to which it belongs (pasta, snacks, sweets,...). Both the *categories* and the areas of the house, called *pantries*, are fully customizable.
 
-Quando l'utente inserisce un prodotto può specificare un'area della casa
-nella quale riporlo (ad esempio il frigo, il freezer, un determinato
-armadio,\...) e una categoria a cui esso appartiene (pasta, snack,
-dolci,\...). Sia le *categorie* che le aree della casa, denominate
-*dispense*, sono completamente personalizzabili.
+## Product information
 
-## Informazioni sui prodotti
+The aim of the application is to make the management of products in the pantry quick and easy. It is possible to assign an expiry date to a product, so that you can quickly see which products should be consumed first and receive a notification when the expiry date is approaching. The application also keeps track of whether or not products have been opened, so that the user is advised to consume those that have already been opened first. those that have already been opened.
 
-L'obiettivo dell'applicazione è rendere semplice e veloce la gestione
-dei prodotti in dispensa. Ad un prodotto può essere assegnata una data
-di scadenza, in modo da poter visualizzare velocemente quali siano i
-prodotti da consumare prima e ricevere una notifica quando la scadenza
-si sta avvicinando. L'applicazione tiene traccia anche dell'eventuale
-apertura dei prodotti, in modo da suggerire all'utente di consumare
-prima quelli che sono già stati aperti.
+From the MyPantry home page it is possible to access the product lists and search them.
 
-Dalla home di *MyPantry*, mostrata in figura 2, è possibile accedere
-agli elenchi dei prodotti nei quali è anche possibile effettuare una
-ricerca, come mostrato nella figura
-[2](#fig:elenco-prodotti){reference-type="ref"
-reference="fig:elenco-prodotti"}.
+<img src="img/products-info.png" alt="Product information" style="width:100%"/>
 
-![Gestione e modifica dei prodotti all'interno di
-*MyPantry*](prodotti){#fig:elenco-prodotti width="0.25\\paperwidth"}
+## Shopping list 
 
-![Gestione e modifica dei prodotti all'interno di
-*MyPantry*](modifica-prodotto){#fig:elenco-prodotti
-width="0.25\\paperwidth"}
+Consumed products can be easily added to the shopping list, a dedicated section of the app that reminds the user which products to re-purchase. A product on the shopping list can be reinserted into the pantry instantly, without the need to interact with the collaborative database.
 
-## Lista della spesa
+I decided to allow only products previously registered within the application to be added to the shopping list.
 
-I prodotti consumati possono essere inseriti agevolmente nella *lista
-della spesa*, una sezione dedicata della app che permette di ricordare
-all'utente quali prodotti deve ri-acquistare. Un prodotto presente nella
-lista della spesa può essere reinserito nella dispensa in modo
-istantaneo, senza la necessità di interagire con il database
-collaborativo.
+<img src="img/shopping-list.png" alt="Shopping list" style="width:100%"/>
 
-Si è scelto di consentire l'inserimento nella lista della spesa soltanto
-di prodotti precedentemente registrati all'interno dell'applicazione.
 
-![Lista della
-spesa](prodotto-aggiunto-a-lista){width="0.25\\paperwidth"}
+## Notifications and summary 
 
-![Lista della spesa](lista-spesa){width="0.25\\paperwidth"}
+In order to make pantry management as easy as possible and avoid food waste, the MyPantry application includes a notification system that alerts users when a product has an imminent expiry date. In addition, a widget can be placed on the home screen or in the notification centre of the iOS device to keep the user up to date on the pantry situation, displaying the number of products present, the number of products that are about to expire and the number that have expired.
 
-## Notifiche e riepilogo
+Lastly, a watchOS app has been created which allows users who own an Apple Watch to have a summary of the contents of their pantry always available on their wrist.
 
-Al fine di semplificare al massimo la gestione della dispensa e evitare
-lo spreco di generi alimentari, l'applicazione *MyPantry* prevede un
-sistema di notifiche che avvisa gli utenti quando un prodotto presenta
-una data di scadenza ravvicinata. Inoltre, è stato realizzato un Widget
-che l'utente può inserire nella home o nel centro notifiche del proprio
-dispositivo iOS per essere sempre aggiornato sulla situazione della
-dispensa, visualizzando il numero di prodotti presenti, il numero di
-prodotti in scadenza e il numero di quelli scaduti.
+# Implementation strategies 
 
-Il Widget realizzato è descritto nel capitolo
-[2.4](#widget){reference-type="ref" reference="widget"}. Infine, è stata
-realizzata una app watchOS che permette agli utenti proprietari di un
-*Apple Watch* di avere sempre a disposizione sul loro polso un riepilogo
-del contenuto della dispensa (vedi capitolo
-[2.5](#watchos){reference-type="ref" reference="watchos"}).
+This section analyses the main functionalities of MyPantry and discusses the and discusses the implementation strategies adopted, taking advantage of the libraries offered by Swift 5.
 
-# Strategie di implementazione
+The project has been implemented following the *Model View Controller pattern* and the [recommendations provided by Apple](https://developer.apple.com/documentation/swift) for the development of iOS apps. In addition, many suggestions provided by the [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/) were followed to improve user experience. 
 
-In questa sezione si analizzano le principali funzionalità di *MyPantry*
-e si discutono le strategie di implementazione adottate, sfruttando le
-librerie offerte da Swift 5.
-
-Il progetto è stato realizzato seguendo il pattern *Model View
-Controller* e le [raccomandazioni fornite da
-Apple](https://developer.apple.com/documentation/swift) per lo sviluppo
-di applicazioni in Swift. Inoltre, si è cercato di applicare il più
-possibile gli interessanti suggerimenti forniti dalle [Human Interface
-Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/)
-per sviluppare un'applicazione gradevole anche dal punto di vista della
-*user experience*.
 
 ## Database
 
-Come anticipato nel capitolo
-[\[introduzione-database\]](#introduzione-database){reference-type="ref"
-reference="introduzione-database"}, l'applicazione sviluppata utilizza
-un database locale per memorizzare i prodotti inseriti dall'utente e
-interagisce con un database remoto collaborativo per associare le
-informazioni di un prodotto al *barcode* corrispondente.
+The developed app uses a local database to save the products inserted by the user and it interacts with a remove collaborative database to associate product information to its *barcode*. 
 
-### Connessione al database remoto {#database-remoto}
+### Connection to the remote database
 
-Per mantenere il codice del progetto ordinato e applicare i principi di
-ingegneria del software di *alta coesione* e *basso accoppiamento*, è
-stata creata una classe denominata `ServerModel` alla quale è stata
-assegnata la responsabilità di gestire le comunicazioni con il database
-remoto.
+In order to keen the project code clean and apply software engineering principles like *high cohesion* and *low coupling* I created a class called `ServerModel` which has the responsibility to handle communications with the remote database. 
 
-La comunicazione con il database remoto avviene sfruttando le
-[URLSession](https://developer.apple.com/documentation/foundation/urlsession)
-del framework `foundation` di Swift.
+Communications with the remote database happen using [URLSession](https://developer.apple.com/documentation/foundation/urlsession)
+of the Swift framework `foundation`. 
 
-Le risposte da parte del server condiviso sono in formato JSON.
-Sfruttando l'interfaccia
-[Codable](https://developer.apple.com/documentation/swift/codable/) e
-[JSONDecoder](https://developer.apple.com/documentation/foundation/jsondecoder/),
-è possibile convertire in modo rapido e efficiente la risposta del
-server nella `struct` mostrata nel listing
-[\[struct-Product\]](#struct-Product){reference-type="ref"
-reference="struct-Product"}.
+Responses of the collaborative server are in JSON format. By using the interface [Codable](https://developer.apple.com/documentation/swift/codable/) and [JSONDecoder](https://developer.apple.com/documentation/foundation/jsondecoder/) it is possible to convert in a quick and efficient way the response in the `struct` shown below. 
 
-``` {#struct-Product caption="Una \\lstinline|struct| per un prodotto disponibile sul server condiviso" label="struct-Product"}
+
+```swift
 struct Product : Codable {
 	let id : String
 	let name : String
@@ -195,13 +91,9 @@ struct Product : Codable {
 }
 ```
 
-Il listing
-[\[server-protocollo\]](#server-protocollo){reference-type="ref"
-reference="server-protocollo"}, invece,mostra i metodi disponibili in
-`ServerModel`, che corrispondono alle funzionalità richieste dalle
-specifiche del progetto.
+The code block below shows the functions available on `ServerModel`.
 
-``` {#server-protocollo caption="I metodi presenti in \\texttt{ServerModel}" label="server-protocollo"}
+```swift
 protocol ServerModelProtocol {
  	func login() throws ->  Void
  	func searchProducts(withBarcode: Barcode) throws -> [Product]
@@ -212,187 +104,103 @@ protocol ServerModelProtocol {
 }
 ```
 
-Se l'utente effettua la ricerca di un *barcode* ma il prodotto non è tra
-quelli restituiti dal database collaborativo, vi è la possibilità di
-aggiungere un nuovo prodotto. I dettagli di tale prodotto vengono
-caricati sul database collaborativo per essere disponibili agli altri
-utenti. Se invece il prodotto cercato è tra quelli mostrati nell'elenco
-scaricato dal server, il prodotto scelto viene comunicato ad esso
-tramite il metodo `pushProductPreference`.
+If the user searches for a *barcode* but the product is not among those returned by the collaborative database, there is an option to add a new product. The details of that product are uploaded to the collaborative database to be available to other users. If the searched product is among those shown in the list downloaded from the server, the chosen product is communicated to it by the `pushProductPreference` method.
 
-Al primo avvio dell'applicazione viene richiesto all'utente di
-registrarsi sul database collaborativo o di utilizzare delle credenziali
-esistenti. Le credenziali di accesso possono essere modificate in
-*impostazioni*.
+When starting the application for the first time, the user is asked to register on the collaborative database or to use existing existing credentials. The login credentials can be changed in *Settings*
 
-#### Nota
+#### Memo
 
-Qualora non sia disponibile una connessione a internet, si è deciso di
-non consentire all'utente di procedere con l'aggiunta di nuovi prodotti
-su *MyPantry* per non derogare alle specifiche del progetto che
-prevedono l'obbligatorietà dell'utilizzo del database collaborativo.
+In the event that an internet connection is not available, it has been decided to not allow the user to proceed with adding new products to MyPantry in order not to deviate from the project specifications that require the use of the collaborative database.
 
-### Database locale
+### Local Database
 
-![`CoreData` model](coredata-model){#coredata-model
-width="0.5\\paperwidth"}
+<img src="img/core-data.png" alt="Core data model" style="width:100%"/>
 
-I prodotti disponibili nella dispensa dell'utente vengono memorizzati in
-un database locale realizzato utilizzando `CoreData`.
+Products available in the user's pantry are saved in a local database build with `CoreData`. 
 
-Il modello del database è mostrato nella figura
-[3](#coredata-model){reference-type="ref" reference="coredata-model"} e
-prevede quattro entità:
+The model shown in the picture above has 4 entities:
 
--   `Pantry`: rappresenta un'area della casa definita dall'utente nella
-    quale vengono riposti i prodotti acquistati (può ad esempio essere
-    il frigo, il freezer o un determinato scaffale)
+-   `Pantry`: represents a user-defined area of the home in which products are stored (it can for example be a fridge, a freezer or a specific shelf)
 
--   `Category`: rappresenta una categoria di prodotti definita
-    dall'utente (può ad esempio essere pasta, snack, dolci,\...)
+-   `Category`: represents a category of products defined by the user (for instance pasta, snacks, desserts, ...)
 
--   `PantryItem`: rappresenta un prodotto presente nella dispensa. Oltre
-    al nome e al *barcode*, si tiene traccia della descrizione, della
-    data di scadenza e dell'eventuale apertura del prodotto. Quando un
-    prodotto viene consumato finisce nell'archivio della app e il valore
-    `consumed` viene impostato a `true`
+-   `PantryItem`: represents a product in the pantry. We track the name, *barcode*, a description, the expiry date and if the product has been opened. When a product is consumed and it goes in the archive the value `consumed` is set to `true`. 
 
--   `ShoppingListItem`: rappresenta un prodotto nella lista della spesa,
-    del quale si memorizza il `barcode`, il nome, la descrizione, la
-    categoria e la dispensa nella quale viene abitualmente inserito
+-   `ShoppingListItem`: represents a product in the shopping list of which we save the `barcode`, the name and the description, the category and the pantry where it usually stored. 
 
-L'inserimento, la modifica e la rimozione di entità non è mai affidata
-ai `ViewController` ma è una responsabilità assegnata a `MyPantryModel`.
+Inserting, editing and deleting entities is never done by `ViewController` but it is a responsibility assigned to `MyPantryModel`.
+ or a pantry, all the products assigned to it will be removed as well. 
+ 
+To store user preferences, like for instance the willingness to receive notifications, I have used `UserDefaults`, as recommended by Apple. 
 
-L'eliminazione di una `Category` o di un `Pantry` segue la politica
-*cascade*. Di conseguenza, se l'utente decide di rimuovere una categoria
-o una dispensa da MyPantry, vengono eliminati anche tutti i prodotti
-associati ad essa.
+## *Barcode* scanning
 
-Per memorizzare le preferenze dell'utente, come ad esempio la volontà di
-ricevere notifiche, sono state utilizzate le `UserDefaults`, come
-raccomandato da Apple.
+To simplify the insertion of new product in MyPantry, there is the possibility to can the *barcode*. 
+To implement this functionality, I have used the powerful library [AVFoundation](https://developer.apple.com/av-foundation/)  of Swift. *Barcode* formats recognized by MyPantry are the standards `EAN-8`, `EAN-13`, `PDF417`. 
 
-## Scansione del *barcode*
 
-Per semplificare e agevolare l'inserimento di nuovi prodotti su
-*MyPantry*, è stata prevista la possibilità di scansionare il *barcode*.
-Per implementare questa funzionalità, è stato utilizzata la potente
-libreria [AVFoundation](https://developer.apple.com/av-foundation/) di
-Swift. I formati di barcode riconosciuti da *MyPantry* sono quelli che
-rispettano gli standard `EAN-8`, `EAN-13`, `PDF417`[^1].
+## Notifications
 
-È comunque lasciata all'utente la possibilità di inserire il *barcode*
-manualmente.
+If the user has enabled notifications for MyPantry, when a new product is entered a notification is scheduled for the day the product will enter the *expiring status* and another notification for the day the product will expire.
 
-## Notifiche
+<img src="img/settings.png" alt="Settings" style="width:100%"/>
 
-![Pagina delle impostazioni di
-*MyPantry*](impostazioni){#fig:impostazioni width="0.25\\paperwidth"}
 
-Dalla pagina delle *Impostazioni*, mostrata in figura
-[4](#fig:impostazioni){reference-type="ref"
-reference="fig:impostazioni"}, è possibile impostare il numero di giorni
-antecedenti la data di scadenza dei prodotti entro i quali un prodotto
-viene considerato *in scadenza*.
+If the product is consumed or disposed of before the expiry date, the scheduled
+scheduled notifications are deleted.
 
-Se l'utente ha abilitato le notifiche per *MyPantry*, al momento
-dell'inserimento di un nuovo prodotto viene programmata una notifica per
-il giorno in cui il prodotto entrerà nello stato *in scadenza* e
-un'altra notifica per il giorno in cui il prodotto scadrà.
+Scheduling of notifications is done by the `MyPantryModel`.
+at the time of product placement, using the
+iOS framework `NotificationCenter`.
 
-Qualora il prodotto venga consumato o eliminato prima della data di
-scadenza, le notifiche programmate vengono eliminate.
-
-La programmazione delle notifiche viene effettuata dal `MyPantryModel`
-al momento dell'inserimento di un prodotto, sfruttando il framework di
-iOS `NotificationCenter`.
-
-Nel caso in cui l'utente disabilitasse le notifiche dalle impostazioni
-di *MyPantry*, tutte le notifiche precedentemente programmate verrebbero
-eliminate.
+If the user disables notifications from the MyPantry settings, all previously scheduled notifications will be deleted.
 
 ## Widget
 
-![Widget nella *home* di iOS](widget){#fig:widget
-width="0.25\\paperwidth"}
+<img src="img/widget.png" alt="Widget" style="width:100%"/>
 
-È stato realizzato un Widget per *MyPantry* che mostra il numero di
-prodotti presenti in dispensa, il numero di prodotti in scadenza e il
-numero di prodotti scaduti. In questo modo l'utente è sempre informato
-sullo stato della dispensa. Uno *screenshot* del Widget è mostrato in
-figura [5](#fig:widget){reference-type="ref" reference="fig:widget"}.
+A widget has been created for MyPantry that shows the number of products in the pantry, the number of products that are about to expire and the number of products that have expired. In this way the user is always informed about the status of the pantry. 
 
-Per condividere informazioni tra il Widget, *MyPantry* e l'applicazione
-per Apple Watch descritta nel prossimo paragrafo, è stato creato un
-`AppGroup`, ovvero un identificativo che permette di raggruppare più
-applicazioni e consentire lo scambio di informazioni tra esse.
+In order to share information between the Widget, MyPantry, and the Apple Watch
+application described in the next paragraph, I  created an `AppGroup`. Sharing of information between MyPantry and the Widget happens using `UserDefaults`. 
 
-In particolare, lo scambio di informazioni tra `MyPantry` e il Widget
-avviene sfruttando le `UserDefaults`, già utilizzate per memorizzare le
-preferenze dell'utente. Ogni volta che viene effettuata una modifica a
-qualche prodotto in *MyPantry*, viene aggiornato il numero di prodotti
-presenti in dispensa, il numero di prodotti in scadenza e il numero di
-quelli scaduti all'interno delle `UserDefaults`. Il Widget accede a
-queste informazioni e le mostra all'utente nella home di iOS o nel
-centro notifiche.
+MyPantry is a *storyboard-based* application. On the contrary, the Widget was built using SwiftUI. 
 
-Il Widget, a differenza di `MyPantry` che è una
-*storyboard-application*, è stato realizzato utilizzando interamente
-SwiftUI.
 
-## Apple Watch {#watchos}
+## Apple Watch
 
-È stata realizzata una app per Apple Watch che permette di mostrare le
-stesse informazioni mostrate dal Widget, descritto nel capitolo
-precedente.
+An app has been created for the Apple Watch that displays the same information as the
+information displayed by the Widget. 
 
-Il sistema di scambio delle informazioni tra *MyPantry* e watchOS,
-tuttavia, non è lo stesso utilizzato con il Widget. A partire da watchOS
-2, infatti, Apple ha rimosso la possibilità di creare `UserDefaults` o
-`CoreData` condivisi tra iOS e watchOS, per permettere agli Apple Watch
-di essere più autonomi da iOS e consentire ai loro utilizzatori di
-sfruttarne funzionalità anche quando non hanno a disposizione il proprio
-iPhone.
+The system for exchanging information between MyPantry and watchOS,
+however, is not the same as that used with the Widget. Starting with watchOS
+2, Apple removed the ability to create shared user defaults or core data between iOS and watchOS in order to allow the Apple Watch to be more autonomous from iOS and allow their users to take advantage of the watch
+functionalities even when they don't have their iPhone with them. 
 
-Di conseguenza, il sistema di comunicazione è più complesso e prevede lo
-scambio di messaggi in modo asincrono tra iOS e Apple Watch.
+Therefore, the sharing of information is more complex and involves asynchronous communications between iOS and Apple Watch. 
 
-L'applicazione *MyPantry* per iOS, quando viene avviata o quando
-registra una modifica nel database dei prodotti, invia all'applicazione
-per Apple Watch un messaggio contenente il numero aggiornato di prodotti
-in dispensa, in scadenza e scaduti.
 
-Il model `WatchConnectionModel` ha la responsabilità di stabilire la
-connessione con Apple Watch ed è utilizzato dal `MyPantryModel` per
-inviare i messaggi.
+The MyPantry iOS application, when started or when it records a change in the product database, sends a message to the Apple Watch application containing the updated number of products in the pantry, expiring and expired products.
 
-L'applicazione per Apple Watch, invece, rimane in ascolto di messaggi di
-questo tipo da parte dell'app per iOS. Ogni volta che riceve un
-messaggio con le informazioni aggiornate, memorizza il contenuto nelle
-proprie `UserDefaults`, in modo che i dati siano accessibli in futuro
-anche nel caso in cui iPhone non fosse raggiungibile.
+The model `WatchConnectionModel` has the responsibility to establish the connection with the Apple Watch and it is used by `MyPantryModel` to send messages. 
 
-Lo scambio di messaggi avviene utilizzando il framework
-[`WatchConnectivity`](https://developer.apple.com/documentation/watchconnectivity).
+The Apple Watch app, on the other hand, listens for such messages from the iOS app. Whenever it receives a
+message with the updated information, it stores the content in its in its `UserDefaults`, so that the data is accessible in the future, even if the iPhone is not reachable. 
 
-![MyPantry su Apple Watch](home-watch){#fig:watch
-width="0.25\\paperwidth"}
+The messages are sent using [`WatchConnectivity`](https://developer.apple.com/documentation/watchconnectivity).
 
-## Documentazione
+<img src="img/watch.png" alt="Widget" style="width:100%"/>
 
-Il codice Swift realizzato è stato commentato (in inglese) seguendo le
-[linee
-guida](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/ComentBlock.html)
-fornite da Apple per la realizzazione di documentazioni di progetti
-Xcode.
 
-Utilizzando [`swift-doc`](https://github.com/SwiftDocOrg/swift-doc) sono
-state generate le pagine HTML della documentazione, che sono disponibili
-nella cartella `docs`.
+## Documentation
 
-![Un frammento della documentazione del progetto generata con
-`swift-doc`](docs){#fig:docs width="0.8\\paperwidth"}
+The Swift code has been commented and labeled following the  [guidelines](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/ComentBlock.html)
+provided by Apple for projects in Xcode. 
 
-[^1]: In Europa gli standard adottati per i *barcode* dei prodotti
-    alimentari sono `EAN-8 ` e `EAN-13`
+By using [`swift-doc`](https://github.com/SwiftDocOrg/swift-doc) I have generated HTML pages of the documentation, which are available in the folder `docs`. 
+
+<img src="img/docs.png" alt="Docs" style="width:100%"/>
+
+---
+
+The original report is written in Italian and it's available in the file `report.pdf`. 
